@@ -21,12 +21,12 @@ function renderWatchlist() {
     displayWatchlist.innerHTML = '';
     
     if (myWatchlist.length === 0) {
-        document.querySelector('.empty-watchlist-display').classList.remove('hidden')
+        document.querySelector('.empty-watchlist-display').style.setProperty('display', 'flex', 'important');
         console.log('Empty Watchlist: Show');
         return
     } else {
         console.log('Empty Watchlist: Hide');
-        document.querySelector('.empty-watchlist-display').classList.add('hidden')
+        document.querySelector('.empty-watchlist-display').style.setProperty('display', 'none', 'important');
     }
 
     for (let movie of myWatchlist) {
